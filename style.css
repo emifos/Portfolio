@@ -1,0 +1,217 @@
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --font-size-h1: 32px;
+    --font-size-h2: 28px;
+    --font-size-h3: 22px;
+    --font-size-text: 18px;
+    --font-size-text-mobile: 16px;
+    --background-color: #121212;
+    --color-text: #F5F5F5;
+    --color-accent: #C4B5FD;
+}
+
+
+html, body {
+    margin: 0;
+    background-color: var(--background-color);
+    font-family: var(--primary-font);
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+main {
+    padding: 40px;
+    background-color: #151515;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    margin: 100px 20px;
+    height: auto;
+    overflow: visible;
+
+}
+
+section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    padding-top: 200px;
+}
+
+
+.navigation,
+.about-h1,
+.about-h2,
+.about-text,
+.projects-h2,
+.project-h3,
+.project-text,
+.contact-h2,
+.contact-text,
+.footer-text,
+.logo,
+.about-button {
+    font-family:var(--primary-font);
+    color: var(--color-text);
+}
+
+.accent {
+    color: var(--color-accent);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(18, 18, 18, 0.6);
+    backdrop-filter: blur(6px);
+    display: block;
+   
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+}
+
+.logo {
+    font-size: var(--font-size-h3);
+    font-weight: 600;
+    margin: 0;
+    flex: 0 0 auto;
+    order: 0;
+    
+}
+
+.navigation {
+    display: flex;
+    gap: 20px;
+
+}
+
+.nav {
+    text-decoration: none;
+    font-size: var(--font-size-text);
+    font-weight: 400;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: 0.25s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.25s ease;
+    display: inline-block;
+}
+
+.nav:hover {
+    color: var(--color-accent);
+    transform: scale(1.07);
+}
+
+
+.section-about {
+    margin-top: 100px;
+}
+
+.about-h1 {
+    font-size: var(--font-size-h2);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.about-h2 {
+    font-size: var(--font-size-h3);
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.about-text {
+    font-size: var(--font-size-text-mobile);
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.about-button {
+    text-decoration: none;
+    background-color: var(--color-accent);
+    color: var(--background-color);
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+@media (min-width: 900px) {
+
+    main {
+        margin-top: 150px;
+    }
+
+    .logo {
+        font-size: var(--font-size-h2);
+    
+    }
+
+    .header-container {
+        padding: 0 60px;
+    }
+
+    .nav {
+        font-size: var(--font-size-h3);
+    }
+
+    .navigation {
+        gap: 40px;
+    }
+
+    .about-h1 {
+        font-size: var(--font-size-h1);
+    }
+
+    .about-h2 {
+        font-size: var(--font-size-h2);
+    }
+}
+
+
+/*Scroll indicator*/
+.scroll-arrow {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    width: 18px;
+    height: 18px;
+    border-left: 2px solid var(--color-text);
+    border-bottom: 2px solid var(--color-text);
+    transform: translateX(-50%) rotate(-45deg);
+    opacity: 0.85;
+    z-index: 9999;
+    pointer-events: none;
+    animation: arrowBounce 1.4s infinite ease-in-out;
+    transition: transform .25s ease, opacity .25s ease;
+}
+
+.scroll-arrow.up {
+    transform: translateX(-50%) rotate(135deg);
+    animation: arrowUpBounce 1.3s infinite ease-in-out;
+}
+
+@keyframes arrowBounce {
+    0% {transform: translateX(-50%) translateY(0) rotate(-45deg); opacity: 0.6;}
+    50% {transform: translateX(-50%) translateY(10px) rotate(-45deg); opacity: 1;}
+    100% {transform: translateX(-50%) translateY(0) rotate(-45deg); opacity: 0.6;}
+}
+
+
+@keyframes arrowUpBounce {
+    0% {transform: translateX(-50%) translateY(0) rotate(135deg);}
+    50% {transform: translateX(-50%) translateY(10px) rotate(135deg);}
+    100% {transform: translateX(-50%) translateY(0) rotate(135deg);}
+}
