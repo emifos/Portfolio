@@ -51,7 +51,9 @@ section {
 .contact-text,
 .footer-text,
 .logo,
-.about-button {
+.about-button,
+.project-link,
+.tag {
     font-family:var(--primary-font);
     color: var(--color-text);
 }
@@ -91,8 +93,11 @@ header {
     font-weight: 600;
     margin: 0;
     flex: 0 0 auto;
-    order: 0;
-    
+    order: 0; 
+}
+
+.logo-dot {
+    color: var(--color-accent);
 }
 
 .navigation {
@@ -119,7 +124,26 @@ header {
 
 .section-about {
     margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+.about-content {
+    flex: 1;
+}
+
+.about-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 
 .about-h1 {
     font-size: var(--font-size-h2);
@@ -148,6 +172,217 @@ header {
     padding: 8px 16px;
 }
 
+/* Projects*/
+
+.projects-h2 {
+    text-align: center;
+    font-size: var(--font-size-h1);
+    padding-bottom: 40px
+}
+.projects-thumbnail {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+    gap: 40px;
+    margin-top: 20px;
+    justify-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.project-card {
+    background: #252525;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    color: var(--color-text);
+    padding-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.project-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.project-h3 {
+    font-size: var(--font-size-h3);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.project-name {
+    font-size: var(--font-size-text);
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0;
+}
+
+.project-text {
+    font-size: var(--font-size-text-mobile);
+    font-weight: 300;
+    text-align: center;
+    padding: 10px;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-link {
+    display: inline;
+    background-color: var(--color-accent);
+    color: var(--background-color);
+    border-radius: 8px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.project-img-wrapper {
+    position: relative;
+
+}
+
+.project-tags {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 6px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+/*Contact*/
+.contact-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-card {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.contact-text {
+    list-style: none;
+
+}
+
+.contact-left {
+    text-align: left;
+}
+
+.contact-info {
+    font-family: var(--primary-font);
+    color: var(--color-text);
+    list-style: none;
+}
+.contact-info i {
+    margin-right: 8px;
+    color: var(--color-text);
+
+}
+
+.contact-email {
+    color: var(--color-text);
+}
+
+.contact-email:hover{
+    color: var(--color-accent);
+}
+
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.contact-profile {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--color-accent);
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+.contact-links {
+    text-decoration: none;
+    padding: 10px;
+    color: var(--color-text);
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    #about {
+        min-height: auto;
+        padding-top: 120px;
+    }
+
+    .section-about {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding-top: 120px;
+
+    }
+
+    .about-image img {
+        width: 80%;
+        max-width: 320px;
+    }
+    .contact-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contact-right {
+        text-align: center;
+        align-items: center;
+    }
+
+    .contact-left {
+        text-align: center;
+    }
+
+    .contact-profile {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
 @media (min-width: 900px) {
 
     main {
@@ -169,6 +404,10 @@ header {
 
     .navigation {
         gap: 40px;
+    }
+
+    .about-text {
+        max-width: 500px;
     }
 
     .about-h1 {

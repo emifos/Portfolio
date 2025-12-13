@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/309152690f.js" crossorigin="anonymous"></script>
     <link href="style.css" rel="stylesheet">
     <script src="app.js" defer></script>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <div class="logo">Emilie.</div>
+            <div class="logo">Emilie<span class="logo-dot">.</span></div>
             <nav class="navigation">
                 <a href="#about" class="nav">About me</a>
                 <a href="#projects" class="nav">Projects</a>
@@ -32,35 +33,98 @@
                 </p>
                 <a href="mailto:emilie.fosmo@hotmail.com" class="about-button">Contact Me</a>
             </div>
+            <div class="about-image">
+                <img src="images/portrait-cv2.png" alt="Portrait of Emilie Fosmo">
+            </div>
         </section>
         <section id="projects" class="section-projects">
             <h2 class="projects-h2">Projects</h2>
             <div class="projects-thumbnail">
                 <div class="project-card">
-                    <h3 class="project-h3">Cross Course Project | Rainy Days</h3>
-                    <p class="project-text">A responsive HTML/CSS website for an outdoor jacket store, created to showcase layout, design implementation, and multi-page navigation.</p>
+                    <div class="project-img-wrapper">
+                        <img src="images/Rainydays-html-css.jpg" alt="Rainy Days thumbnail" class="project-img">
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                    <h3 class="project-h3">Cross Course Project</h3>
+                    <p class="project-name">Rainy Days</p>
+                    <p class="project-text">A responsive webshop built with HTML and CSS focusing on clean layout, visual styling, and multi-page navigation.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/emifos/HTML-CSS" target="_blank" class="project-link">Github Repo</a>
+                        <a href="https://emifos.github.io/HTML-CSS/" target="_blank" class="project-link">Live Demo</a>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <h3 class="project-h3">JS1 | Rainy Days</h3>
-                    <p class="project-text">This project is my JavaScript 1 Course Assignment. This project builds on my previous work from the Rainy Days project, where I reused structure and styling as a starting point.</p>
+                    <div class="project-img-wrapper">
+                        <img src="images/Rainydays-js.jpg" alt="Rainy Days JS thumbnail" class="project-img">
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <h3 class="project-h3">JS1</h3>
+                    <p class="project-name">Rainy Days</p>
+                    <p class="project-text">A Javascript-based version of Rainy Days featuring dynamic content. Using API to fetch products.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/emifos/CA-JS1" target="_blank" class="project-link">Github Repo</a>
+                        <a href="https://emifos.github.io/CA-JS1/" target="_blank" class="project-link">Live Demo</a>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <h3 class="project-h3">Semester Project 1 | Community Science Museum</h3>
-                    <p class="project-text">Designed and developed a responsive museum website in a two-person team, including a ticket-purchase user flow. Created the Figma prototype, used GitHub Kanban for planning, and collaborated through branches and pull requests. Built the site using pure HTML and CSS.</p>
+                    <div class="project-img-wrapper">
+                        <img src="images/community science .jpg" alt="Community Science Museum thumbnail" class="project-img">
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                    <h3 class="project-h3">Semester Project 1</h3>
+                    <p class="project-name">Community Science Museum</p>
+                    <p class="project-text">A responsive website created in a two-person team, featuring a clear layout and a simple userflow for tickets.</p>
+                    <div class="project-links">
+                    <a href="https://github.com/emifos/Semester-Project" target="_blank" class="project-link">Github Repo</a>
+                    <a href="https://emifos.github.io/Semester-Project/" target="_blank" class="project-link">Live Demo</a>
+                    </div> 
                 </div>
             </div>
         </section>
-        <section id="contact" class="section-contact">
-            <h2 class="contact-h2">Contact</h2>
-            <p class="contact-text">Email:<a href="mailto:emilie.fosmo@hotmail.com">emilie.fosmo@hotmail.com</a></p>
-            <p class="contact-text">Github:<a href="https://github.com/emifos" target="_blank">github.com/emifos</a></p>
-            <p class="contact-text">LinkedIn:<a href="https://www.linkedin.com/in/emilie-sofie-fosmo-1b9bb1228/" target="_blank" rel="noopener noreferrer">Emilie Sofie Fosmo</a></p>
-            <p class="contact-text">
-                <a href="" target="_blank">Download CV</a>
-            </p>
-            <p class="contact-text">
-                <a href="" target="_blank">Download Cover Letter</a>
-            </p>
+        <section id="contact" class="contact-section">
+            <h2 class="contact-h2">Contact Me</h2>
+            <div class="contact-card">
+                <div class="contact-left">
+                    <img src="images/portrait-cv2.png" alt="Portrait of Emilie Fosmo" class="contact-profile">
+                    <ul class="contact-info">
+                        <li><i class="fa-regular fa-address-card"></i> Emilie Sofie Fosmo</li>
+                        <li><i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:emilie.fosmo@hotmail.com" class="contact-email">emilie.fosmo@hotmail.com</a>
+                        </li>
+                        <li><i class="fa-solid fa-location-dot"></i> Asker, Norway</li>
+                    </ul>
+                </div>
+                <div class="contact-right">
+                    <ul class="contact-text">
+                        <li>
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/emifos" class="contact-links" target="_blank">github.com/emifos</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/emilie-sofie-fosmo-1b9bb1228/" class="contact-links" target="_blank" rel="noopener noreferrer">Emilie Sofie Fosmo</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-file"></i>
+                            <a href="" class="contact-links" target="_blank">Download CV</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-file"></i>
+                            <a href="" class="contact-links" target="_blank">Download Cover Letter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
     </main>
