@@ -54,7 +54,8 @@ section {
 .about-button,
 .project-link,
 .tag,
-.contact-subtitle {
+.contact-subtitle,
+.skills-h2 {
     font-family:var(--primary-font);
     color: var(--color-text);
 }
@@ -89,6 +90,10 @@ header {
 
 }
 
+.mobile-nav summary {
+    display: none;
+}
+
 .logo {
     font-size: var(--font-size-h3);
     font-weight: 600;
@@ -105,6 +110,10 @@ header {
     display: flex;
     gap: 20px;
 
+}
+
+.mobile-nav {
+    display: none;
 }
 
 .nav {
@@ -173,6 +182,68 @@ header {
     padding: 8px 16px;
 }
 
+/*Skills*/
+
+.section-skills {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-h2 {
+    font-size: var(--font-size-h1);
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 40px;
+
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 16px;
+    text-align: center;
+    border: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.skill-card.html {
+    color: #c85a4a;
+}
+
+.skill-card.css {
+    color: #4a86a8;
+}
+
+.skill-card.js {
+    color: #e0c84f;
+}
+
+.skill-card.github {
+    color: #2f8dbd;
+}
+
+.skill-card.vscode {
+    color: #9a5fa6;
+}
+.skill-card.figma {
+    color: #4f9b7f;
+}
+
+.skill-card.api {
+    color: #b87b4b;
+}
+
+.skill-card:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
 /* Projects*/
 
 .projects-h2 {
@@ -276,7 +347,10 @@ header {
 
 .contact-h2 {
     font-size: var(--font-size-h2);
+    margin-bottom: 30px;
 }
+
+
 .contact-section {
     margin-top: 20px;
     text-align: center;
@@ -313,6 +387,11 @@ header {
 
 }
 
+.contact-links:hover {
+    text-decoration: underline;
+    color: var(--color-accent);
+}
+
 .contact-left {
     display: flex;
     flex-direction: column;
@@ -328,6 +407,10 @@ header {
     width: 100%;
     max-width: 280px;
 }
+
+.contact-info li {
+    padding: 5px 0;
+}
 .contact-info i {
     margin-right: 8px;
     color: var(--color-text);
@@ -336,10 +419,12 @@ header {
 
 .contact-email {
     color: var(--color-text);
+    text-decoration: none;
 }
 
 .contact-email:hover{
     color: var(--color-accent);
+    text-decoration: underline;
 }
 
 .contact-right {
@@ -368,9 +453,48 @@ header {
 
 }
 
+.contact-text li {
+    margin: 5px 0;
+}
+
 
 
 @media (max-width: 768px) {
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .mobile-nav summary {
+        display: block;
+    }
+
+    .mobile-links {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 12px;
+    }
+
+    .menu-toggle {
+        cursor: pointer;
+        color: var(--color-accent);
+        font-size: var(--font-size-text);
+        font-weight: 600;
+    }
+
+    .nav {
+        font-size: var(--font-size-text-mobile);
+    }
+
+    .mobile-nav summary::-webkit-details-marker {
+        display: none;
+    }
 
     #about {
         min-height: auto;

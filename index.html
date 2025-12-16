@@ -16,11 +16,21 @@
     <header>
         <div class="header-container">
             <div class="logo">Emilie<span class="logo-dot">.</span></div>
-            <nav class="navigation">
+            <nav class="navigation desktop-nav">
                 <a href="#about" class="nav">About me</a>
+                <a href="#skills" class="nav">Skills</a>
                 <a href="#projects" class="nav">Projects</a>
                 <a href="#contact" class="nav">Contact</a>
             </nav>
+            <details class="mobile-nav">
+                <summary class="menu-toggle">Explore</summary>
+                <nav class="navigation mobile-links">
+                    <a href="#about" class="nav">About me</a>
+                    <a href="#skills" class="nav">Skills</a>
+                    <a href="#projects" class="nav">Projects</a>
+                    <a href="#contact" class="nav">Contact</a>
+                </nav>
+            </details>
         </div>
     </header>
     <main>
@@ -35,6 +45,18 @@
             </div>
             <div class="about-image">
                 <img src="images/portrait-cv2.png" alt="Portrait of Emilie Fosmo">
+            </div>
+        </section>
+        <section id="skills" class="section-skills">
+            <h2 class="skills-h2">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card html">HTML</div>
+                <div class="skill-card css">CSS</div>
+                <div class="skill-card js">JavaScript</div>
+                <div class="skill-card github">Github</div>
+                <div class="skill-card vscode">VS Code</div>
+                <div class="skill-card figma">Figma</div>
+                <div class="skill-card api">API</div>
             </div>
         </section>
         <section id="projects" class="section-projects">
@@ -118,11 +140,11 @@
                             </li>
                             <li>
                                 <i class="fa-solid fa-file"></i>
-                                <a href="" class="contact-links" target="_blank">Download CV</a>
+                                <a href="files/CV.pdf" class="contact-links" target="_blank">Download CV</a>
                             </li>
                             <li>
                                 <i class="fa-solid fa-file"></i>
-                                <a href="" class="contact-links" target="_blank">Download Cover Letter</a>
+                                <a href="files/cover-letter.pdf" class="contact-links" target="_blank">Download Cover Letter</a>
                             </li>
                         </ul>
                     </div>
