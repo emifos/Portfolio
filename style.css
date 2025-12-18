@@ -30,7 +30,6 @@ main {
     margin: 100px 20px;
     height: auto;
     overflow: visible;
-
 }
 
 section {
@@ -76,8 +75,7 @@ header {
     align-items: center;
     background-color: rgba(18, 18, 18, 0.6);
     backdrop-filter: blur(6px);
-    display: block;
-   
+    display: block;  
 }
 
 .header-container {
@@ -87,7 +85,6 @@ header {
     padding: 0 20px;
     box-sizing: border-box;
     margin: 0 auto;
-
 }
 
 .mobile-nav summary {
@@ -109,7 +106,6 @@ header {
 .navigation {
     display: flex;
     gap: 20px;
-
 }
 
 .mobile-nav {
@@ -195,7 +191,6 @@ header {
     text-align: center;
     margin-top: 150px;
     margin-bottom: 40px;
-
 }
 
 .skills-grid {
@@ -251,6 +246,7 @@ header {
     font-size: var(--font-size-h1);
     padding-bottom: 40px
 }
+
 .projects-thumbnail {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
@@ -270,7 +266,6 @@ header {
     color: var(--color-text);
     padding-bottom: 20px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    
 }
 
 .project-card:hover {
@@ -411,10 +406,10 @@ header {
 .contact-info li {
     padding: 5px 0;
 }
+
 .contact-info i {
     margin-right: 8px;
     color: var(--color-text);
-
 }
 
 .contact-email {
@@ -442,7 +437,6 @@ header {
     border: 2px solid var(--color-accent);
     margin-bottom: 10px;
     display: block;
-
 }
 
 .contact-links {
@@ -450,7 +444,6 @@ header {
     padding: 10px;
     color: var(--color-text);
     font-size: var(--font-size-text);
-
 }
 
 .contact-text li {
@@ -524,7 +517,6 @@ header {
         width: 320px;
         margin: 0 auto;
         text-align: left;
-        
     }
 
     .contact-left {
@@ -540,7 +532,6 @@ header {
     .contact-text {
         font-size: var(--font-size-text-mobile);
         width: 100%;
-        
     }
 
     .contact-links-group {
@@ -561,7 +552,6 @@ header {
 
     .logo {
         font-size: var(--font-size-h2);
-    
     }
 
     .header-container {

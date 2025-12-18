@@ -1,4 +1,5 @@
 /* Scroll-Arrow*/
+/*Used this article for inspiration and guidance: https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver */
 document.addEventListener('DOMContentLoaded', () => {
     const arrow = document.querySelector(".scroll-arrow")
     if (!arrow) return
